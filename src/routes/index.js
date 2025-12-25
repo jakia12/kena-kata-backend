@@ -1,13 +1,8 @@
-// src/routes/index.js
 import express from "express";
+import authRoutes from "./auth.routes.js";
 
 const router = express.Router();
 
-/**
- * ===============================
- * Health Check
- * ===============================
- */
 router.get("/health", (req, res) => {
   res.status(200).json({
     success: true,
@@ -16,13 +11,7 @@ router.get("/health", (req, res) => {
   });
 });
 
-/**
- * ===============================
- * Future Routes
- * ===============================
- */
-// router.use("/auth", authRoutes);
-// router.use("/products", productRoutes);
-// router.use("/orders", orderRoutes);
+// Mount feature routes
+router.use("/auth", authRoutes);
 
 export default router;
