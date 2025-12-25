@@ -1,0 +1,6 @@
+PORT=5000
+MONGODB_URI= mongodb://127.0.0.1:27017/kena-kata
+
+JWT_SECRET=kOuN2UJ65POtlxSK0UKmrvs69B23sefY
+JWT_EXPIRES_IN=7d
+NODE_ENV=development
